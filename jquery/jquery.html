@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .Berhasil {
+        color: green;
+        font-weight: bold;
+      }
+      .dungu {
+        color: red;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        font-weight: 900;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Text -->
+    <button class="btn">Klik 1</button>
+    <button class="btn">Klik 2</button>
+    <!-- Keyup -->
+    <input type="text" />
+    <p id="output"></p>
+    <!-- Toggle -->
+    <button id="toggle">Toggle</button>
+    <div id="box">
+      <!-- AddClass -->
+      <p id="msg">Status</p>
+      <p id="msg" class="berhasil"></p>
+      <!-- Alert() -->
+      <a href="#" id="trust">Don't Click This Link</a>
+      <p id="trustss" class="dungu"></p>
+      <br />
+      <!-- Confirm -->
+      <a href="https://youtu.be/xvFZjo5PgG0?si=SnWZHkGWEXsNeJ0U" id="percaya"
+        >Don't Click This Link</a
+      >
+      <!-- Closest -->
+      <table>
+        <tr>
+          <td>Buku A</td>
+          <td><a href="#" class="delete">Delete</a></td>
+        </tr>
+      </table>
+      <p>Ini teks rahasia</p>
+    </div>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script>
+    $(function () {
+      // Soal 1 Kode
+      $(".btn").click(function (c) {
+        $(this).text("Sudah Di Klik");
+      });
+      // soal 2 koed
+      $("input").keyup(function () {
+        $("#output").text("Password Kamu Adalah : " + $(this).val());
+      });
+      // soal 3 kode
+      $("#toggle").click(function () {
+        $("#box").toggle("slow");
+      });
+      // add class
+      $("#msg").addClass("Berhasil");
+      // closest
+      $(".delete").click(function (e) {
+        e.preventDefault();
+        $(this).closest("tr").hide();
+      });
+      // alert
+      $("#trust").click(function () {
+        alert("Gweh Bilang Jangan Di Click");
+        $(this).text("DUNGU");
+      });
+      // confirm
+      $("#percaya").click(function (e) {
+        if (!confirm("Yakin Kah Kiddo?")) {
+          e.preventDefault();
+        }
+      });
+    });
+  </script>
+</html>

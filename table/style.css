@@ -1,0 +1,286 @@
+/* GLOBAL ----------------------------------------------------- */
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f5f7fb;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 85%;
+  margin: auto;
+  margin-top: 40px;
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease;
+}
+.fade-up {
+  animation: fadeUp 0.8s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* TITLE ------------------------------------------------------- */
+
+.title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 5px;
+}
+
+.sub {
+  text-align: center;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* SEARCH BOX -------------------------------------------------- */
+
+.search-box {
+  position: relative;
+  max-width: 450px;
+  margin: 0 auto 25px auto;
+  display: flex;
+  gap: 10px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  outline: none;
+  transition: .3s;
+}
+
+.search-box input:focus {
+  border-color: #007bff;
+}
+
+.search-box button {
+  padding: 10px 18px;
+  border: none;
+  background: #007bff;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.search-box button:hover {
+  background: #005fcc;
+}
+
+/* SUGGEST LIST */
+
+.suggest-box {
+  position: absolute;
+  top: 45px;
+  width: 100%;
+  background: white;
+  list-style: none;
+  padding: 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  max-height: 230px;
+  overflow-y: auto;
+  display: none;
+}
+
+.suggest-box li {
+  padding: 10px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.suggest-box li:hover {
+  background: #f0f0f0;
+}
+
+/* BUTTONS ----------------------------------------------------- */
+
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.btn {
+  padding: 10px 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: .3s;
+}
+
+.primary {
+  background: #007bff;
+  color: white;
+}
+
+.primary:hover {
+  background: #005fcc;
+}
+.pinjam {
+  background: greenyellow;
+  color: white;
+}
+
+.danger {
+  background: #ff4d4d;
+  color: white;
+}
+
+.danger:hover {
+  background: #cc0000;
+}
+
+/* TABLE -------------------------------------------------------- */
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.table th {
+  background: #007bff;
+  color: white;
+  padding: 12px;
+}
+
+.table td {
+  padding: 12px;
+  border-bottom: .5px solid #eee;
+  text-align: center;
+}
+
+.table tr:hover {
+  background: #f5f9ff;
+}
+
+/* LINKS -------------------------------------------------------- */
+
+.link {
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  color: white;
+  font-size: 13px;
+}
+
+.update {
+  background: #ffa500;
+}
+
+.update:hover {
+  background: #cc8400;
+}
+
+.delete {
+  background: #ff4d4d;
+}
+
+.delete:hover {
+  background: #cc0000;
+}
+
+.back {
+  display: block;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #007bff;
+  transition: .3s;
+}
+
+.back:hover {
+  color: #004a99;
+}
+/* Modal Background */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Modal Box */
+.modal-box {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 30px 20px;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  animation: slideDown 0.3s ease;
+}
+
+/* Text */
+.modal-text {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Buttons container */
+.modal-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Buttons */
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.btn-yes {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+.btn-yes:hover {
+  background-color: #c0392b;
+}
+
+.btn-cancel {
+  background-color: #bdc3c7;
+  color: #2c3e50;
+}
+
+.btn-cancel:hover {
+  background-color: #95a5a6;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes slideDown {
+  from {transform: translateY(-20px);}
+  to {transform: translateY(0);}
+}

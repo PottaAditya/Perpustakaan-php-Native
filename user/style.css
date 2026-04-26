@@ -1,0 +1,160 @@
+/* Font & Body */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f') no-repeat center/cover;
+    backdrop-filter: blur(5px);
+}
+
+/* Animasi masuk */
+.fade-in {
+    animation: fadeIn 1s ease;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Card login transparan */
+.card {
+    width: 330px;
+    padding: 25px;
+    border-radius: 18px;
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+
+    animation: fadeIn 1s ease;
+}
+
+/* Title */
+.card h2 {
+    color: white;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Label dan Input */
+label {
+    display: block;
+    text-align: left;
+    color: #f1f1f1;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+
+    background: rgba(255, 255, 255, 0.25);
+    color: #fff;
+    font-size: 14px;
+
+    transition: 0.3s ease;
+}
+
+input:focus {
+    background: rgba(255, 255, 255, 0.35);
+    transform: scale(1.03);
+}
+
+/* Tombol */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+button:hover {
+    background: #005fcc;
+    transform: scale(1.05);
+}
+
+/* Error message */
+.error {
+    color: #ff4d4d;
+    background: rgba(255, 0, 0, 0.15);
+    padding: 8px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+/* Link Register */
+.regis {
+    display: block;
+    margin-top: 12px;
+    color: #e2e2e2;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.regis:hover {
+    color: white;
+}
+/* Show/Hide Password Button */
+.eye {
+    position: absolute;
+    top: 36px;
+    right: 12px;
+    cursor: pointer;
+    user-select: none;
+    font-size: 18px;
+}
+
+/* Input typing animation */
+input.typing {
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.7);
+}
+
+/* Shake error */
+@keyframes shake {
+    0%   { transform: translateX(0); }
+    25%  { transform: translateX(-5px); }
+    50%  { transform: translateX(5px); }
+    75%  { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+.shake {
+    animation: shake .4s ease;
+}
+.success {
+    color: #00d26a;
+    background: rgba(0, 255, 150, 0.15);
+    padding: 8px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+#error {
+    color: red;
+    font-weight: 700;
+}
+
